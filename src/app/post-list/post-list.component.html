@@ -1,8 +1,9 @@
 <h2>Mes derniers posts !</h2>
 <ul class="list-group">
-    <app-post-list-item postTitle="Test 1"
-                        
-                        postContent="Le contenu trop bien"
-                        >
+    <app-post-list-item *ngFor="let post of posts"
+                        [postTitle]="post.title"
+                        [postDate]="post.created_at"
+                        [postContent]="post.content"
+                        [postLikes]="post.loveIts">
     </app-post-list-item>
 </ul>
