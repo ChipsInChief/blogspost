@@ -1,1 +1,6 @@
-<p>post-list-item works!</p>
+<li class="list-group-item">
+    <h3>{{ postTitle }}</h3>
+    <p>{{ postDate | date : 'EEEE d MMMM y' }}</p>
+    <p>{{ postContent }}</p>
+    <p>{{ postLikes }}</p>
+</li>
