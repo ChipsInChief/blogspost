@@ -1,4 +1,6 @@
-<li class="list-group-item">
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLikes > 0,
+                'list-group-item-danger': postLikes < 0}">
     <h3>{{ postTitle }}</h3>
     <p>{{ postDate | date : 'EEEE d MMMM y' }}</p>
     <p>{{ postContent }}</p>
