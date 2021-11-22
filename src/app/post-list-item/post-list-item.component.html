@@ -1,10 +1,14 @@
-<li [ngClass]="{'list-group-item': true,
+<div class="post-space">
+    <li [ngClass]="{'list-group-item': true,
                 'list-group-item-success': postLikes > 0,
                 'list-group-item-danger': postLikes < 0}">
-    <h3>{{ postTitle }}</h3>
-    <p>{{ postDate | date : 'EEEE d MMMM y' }}</p>
-    <p>{{ postContent }}</p>
-    <p>{{ postLikes }}</p>
-    <button  type="button" class="btn btn-success" (click)="onLoveIt()" >Love It!</button>
-    <button  type="button" class="btn btn-danger" (click)="onDontLoveIt()">Don't Love It!</button>
-</li>
+        <h3>{{ postTitle }}
+            <small class="pull-right">
+                <em class="text-capitalize">{{ postDate | date : 'EEEE d MMMM y' }}</em>
+            </small>
+        </h3>
+        <p>{{ postContent }}</p>
+        <button type="button" class="btn btn-success btn-space" (click)="onLoveIt()">Love It!</button>
+        <button type="button" class="btn btn-danger" (click)="onDontLoveIt()">Don't Love It!</button>
+    </li>
+</div>
